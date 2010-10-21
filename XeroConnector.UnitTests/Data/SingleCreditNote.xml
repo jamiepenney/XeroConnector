@@ -1,0 +1,77 @@
+﻿<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>b76aad97-cb4b-4fc5-9a45-f8d523fa83d2</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2010-09-02T11:04:34.2449101Z</DateTimeUTC>
+  <CreditNotes>
+    <CreditNote>
+      <Reference>Yr Ref W08-143</Reference>
+      <Type>ACCPAYCREDIT</Type>
+      <Contact>
+        <ContactID>34693c2b-87f6-41b8-8df2-9929a4ac7041</ContactID>
+        <ContactStatus>ACTIVE</ContactStatus>
+        <Name>PC Complete</Name>
+        <EmailAddress>sean.brown@pcc.co</EmailAddress>
+        <SkypeUserName>pchelp.demopurposesonly</SkypeUserName>
+        <Addresses>
+          <Address>
+            <AddressType>STREET</AddressType>
+          </Address>
+          <Address>
+            <AddressType>POBOX</AddressType>
+          </Address>
+        </Addresses>
+        <Phones>
+          <Phone>
+            <PhoneType>DDI</PhoneType>
+          </Phone>
+          <Phone>
+            <PhoneType>MOBILE</PhoneType>
+            <PhoneNumber>8897771</PhoneNumber>
+            <PhoneAreaCode>0777</PhoneAreaCode>
+          </Phone>
+          <Phone>
+            <PhoneType>DEFAULT</PhoneType>
+            <PhoneNumber>8892225</PhoneNumber>
+            <PhoneAreaCode>0234</PhoneAreaCode>
+          </Phone>
+          <Phone>
+            <PhoneType>FAX</PhoneType>
+          </Phone>
+        </Phones>
+        <UpdatedDateUTC>2010-08-15T23:25:19.58</UpdatedDateUTC>
+        <IsSupplier>true</IsSupplier>
+        <IsCustomer>false</IsCustomer>
+      </Contact>
+      <Date>2010-06-28T00:00:00</Date>
+      <Status>PAID</Status>
+      <LineAmountTypes>Inclusive</LineAmountTypes>
+      <LineItems>
+        <LineItem>
+          <Description>Unable to supplie DVD writer for laptop - backorder</Description>
+          <Quantity>1.0000</Quantity>
+          <UnitAmount>270.63</UnitAmount>
+          <TaxType>SRINPUT</TaxType>
+          <TaxAmount>35.30</TaxAmount>
+          <LineAmount>270.63</LineAmount>
+          <AccountCode>720</AccountCode>
+          <Tracking>
+            <TrackingCategory>
+              <TrackingCategoryID>a9cb5b5e-398c-4620-8fed-cec3965abba8</TrackingCategoryID>
+              <Name>Consultant</Name>
+              <Option>Oliver Gray</Option>
+            </TrackingCategory>
+          </Tracking>
+        </LineItem>
+      </LineItems>
+      <SubTotal>235.33</SubTotal>
+      <TotalTax>35.30</TotalTax>
+      <Total>270.63</Total>
+      <UpdatedDateUTC>2010-08-14T23:42:33.367</UpdatedDateUTC>
+      <CurrencyCode>GBP</CurrencyCode>
+      <FullyPaidOnDate>2010-06-28T00:00:00</FullyPaidOnDate>
+      <CreditNoteID>84b39b6c-7afa-4b20-88ee-1324049f531f</CreditNoteID>
+      <CreditNoteNumber>OG laptop</CreditNoteNumber>
+    </CreditNote>
+  </CreditNotes>
+</Response>

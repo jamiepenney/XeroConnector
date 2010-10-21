@@ -1,0 +1,17 @@
+﻿<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>2ebd03aa-3533-443b-8003-280a22ac8082</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2010-09-02T10:37:47.00111Z</DateTimeUTC>
+  <Accounts>
+    <Account>
+      <AccountID>46b098a7-57d8-400c-82d9-32cc748f7d8c</AccountID>
+      <Code>090</Code>
+      <Name>HSBC Business Current A/C</Name>
+      <Type>BANK</Type>
+      <TaxType>NONE</TaxType>
+      <EnablePaymentsToAccount>true</EnablePaymentsToAccount>
+      <BankAccountNumber>404040123456789</BankAccountNumber>
+    </Account>
+  </Accounts>
+</Response>

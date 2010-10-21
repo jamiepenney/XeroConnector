@@ -1,0 +1,16 @@
+﻿<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>e13c881e-b1ca-48ca-b92d-c6c8beddaa07</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2010-09-02T11:07:14.9990253Z</DateTimeUTC>
+  <Organisations>
+    <Organisation>
+      <Name>Demo Company (UK)</Name>
+      <LegalName>Demo Company (UK)</LegalName>
+      <PaysTax>true</PaysTax>
+      <Version>UK</Version>
+      <OrganisationType>COMPANY</OrganisationType>
+      <BaseCurrency>GBP</BaseCurrency>
+    </Organisation>
+  </Organisations>
+</Response>

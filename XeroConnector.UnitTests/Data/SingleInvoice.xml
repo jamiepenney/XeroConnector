@@ -1,0 +1,106 @@
+﻿<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>2ebd03aa-3533-443b-8003-280a22ac8082</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2010-09-02T10:37:47.00111Z</DateTimeUTC>
+  <Invoices>
+    <Invoice>
+      <Type>ACCPAY</Type>
+      <Contact>
+        <ContactID>025867f1-d741-4d6b-b1af-9ac774b59ba7</ContactID>
+        <ContactStatus>ACTIVE</ContactStatus>
+        <Name>City Agency</Name>
+        <Addresses>
+          <Address>
+            <AddressType>STREET</AddressType>
+          </Address>
+          <Address>
+            <AddressType>POBOX</AddressType>
+            <AddressLine1>L4, CA House</AddressLine1>
+            <AddressLine2>14 Boulevard Quay</AddressLine2>
+            <City>Wellington</City>
+            <PostalCode>6012</PostalCode>
+          </Address>
+        </Addresses>
+        <Phones>
+          <Phone>
+            <PhoneType>DEFAULT</PhoneType>
+          </Phone>
+          <Phone>
+            <PhoneType>DDI</PhoneType>
+          </Phone>
+          <Phone>
+            <PhoneType>MOBILE</PhoneType>
+          </Phone>
+          <Phone>
+            <PhoneType>FAX</PhoneType>
+          </Phone>
+        </Phones>
+        <UpdatedDateUTC>2009-08-15T00:18:43.473</UpdatedDateUTC>
+        <IsSupplier>false</IsSupplier>
+        <IsCustomer>true</IsCustomer>
+      </Contact>
+      <Reference>City01</Reference>
+      <Date>2009-05-27T00:00:00</Date>
+      <DueDate>2009-06-06T00:00:00</DueDate>
+      <Status>VOIDED</Status>
+      <LineAmountTypes>Inclusive</LineAmountTypes>
+      <LineItems>
+        <LineItem>
+          <Description>Onsite project management </Description>
+          <Quantity>1.0000</Quantity>
+          <UnitAmount>1800.00</UnitAmount>
+          <TaxType>OUTPUT</TaxType>
+          <TaxAmount>225.00</TaxAmount>
+          <LineAmount>1800.00</LineAmount>
+          <AccountCode>200</AccountCode>
+          <Tracking>
+            <TrackingCategory>
+              <TrackingCategoryID>e2f2f732-e92a-4f3a-9c4d-ee4da0182a13</TrackingCategoryID>
+              <Name>Activity/Workstream</Name>
+              <Option>Onsite consultancy</Option>
+            </TrackingCategory>
+          </Tracking>
+        </LineItem>
+        <LineItem>
+          <Description>Onsite project management 2 </Description>
+          <Quantity>1.0000</Quantity>
+          <UnitAmount>1800.00</UnitAmount>
+          <TaxType>OUTPUT</TaxType>
+          <TaxAmount>225.00</TaxAmount>
+          <LineAmount>1800.00</LineAmount>
+          <AccountCode>200</AccountCode>
+          <Tracking>
+            <TrackingCategory>
+              <TrackingCategoryID>e2f2f732-e92a-4f3a-9c4d-ee4da0182a13</TrackingCategoryID>
+              <Name>Activity/Workstream</Name>
+              <Option>Onsite consultancy</Option>
+            </TrackingCategory>
+          </Tracking>
+        </LineItem>
+      </LineItems>
+      <SubTotal>1800.00</SubTotal>
+      <TotalTax>225.00</TotalTax>
+      <Total>2025.00</Total>
+      <UpdatedDateUTC>2009-08-15T00:18:43.457</UpdatedDateUTC>
+      <CurrencyCode>NZD</CurrencyCode>
+      <InvoiceID>243216c5-369e-4056-ac67-05388f86dc81</InvoiceID>
+      <InvoiceNumber>OIT00546</InvoiceNumber>
+      <Payments>
+        <Payment>
+          <Date>2009-09-01T00:00:00</Date>
+          <Amount>1000.00</Amount>
+          <PaymentID>0d666415-cf77-43fa-80c7-56775591d426</PaymentID>
+        </Payment>
+        <Payment>
+          <Date>2009-09-01T00:00:00</Date>
+          <Amount>50.00</Amount>
+          <PaymentID>0d666415-cf77-43fa-80c7-56775591d426</PaymentID>
+        </Payment>
+      </Payments>
+      <AmountDue>975.00</AmountDue>
+      <AmountPaid>1050.00</AmountPaid>
+      <AmountCredited>0.00</AmountCredited>
+    </Invoice>
+  </Invoices>
+</Response>

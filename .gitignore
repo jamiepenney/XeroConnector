@@ -1,0 +1,7 @@
+
+*.suo
+XeroConnector/bin
+XeroConnector/obj
+XeroConnector.UnitTests/bin
+XeroConnector.UnitTests/obj
+*.ReSharper.user

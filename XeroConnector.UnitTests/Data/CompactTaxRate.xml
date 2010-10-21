@@ -1,0 +1,19 @@
+﻿<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>9cb04f3a-7def-4572-b109-736c44347aab</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2010-09-02T11:08:41.3918619Z</DateTimeUTC>
+  <TaxRates>
+    <TaxRate>
+      <Name>15% (VAT on Capital Purchases)</Name>
+      <TaxType>CAPEXSRINPUT</TaxType>
+      <CanApplyToAssets>true</CanApplyToAssets>
+      <CanApplyToEquity>false</CanApplyToEquity>
+      <CanApplyToExpenses>false</CanApplyToExpenses>
+      <CanApplyToLiabilities>false</CanApplyToLiabilities>
+      <CanApplyToRevenue>false</CanApplyToRevenue>
+      <DisplayTaxRate>15.0000</DisplayTaxRate>
+      <EffectiveRate>15.0000</EffectiveRate>
+    </TaxRate>
+  </TaxRates>
+</Response>

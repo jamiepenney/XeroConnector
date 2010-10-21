@@ -1,0 +1,27 @@
+﻿<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>f56089db-65b0-4f73-93b0-7ddcac95ea52</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2010-09-02T11:03:07.8676989Z</DateTimeUTC>
+  <CreditNotes>
+    <CreditNote>
+      <Reference>Yr Ref W08-143</Reference>
+      <Type>ACCRECCREDIT</Type>
+      <Contact>
+        <ContactID>48d00834-08da-4523-b81e-b089b8225717</ContactID>
+        <Name>DIISR - Small Business Services</Name>
+      </Contact>
+      <Date>2010-07-24T00:00:00</Date>
+      <Status>PAID</Status>
+      <LineAmountTypes>Exclusive</LineAmountTypes>
+      <SubTotal>19.95</SubTotal>
+      <TotalTax>2.99</TotalTax>
+      <Total>22.94</Total>
+      <UpdatedDateUTC>2010-08-15T00:40:38.323</UpdatedDateUTC>
+      <CurrencyCode>GBP</CurrencyCode>
+      <FullyPaidOnDate>2010-07-24T00:00:00</FullyPaidOnDate>
+      <CreditNoteID>201fe941-fa47-4d82-bc82-ba47ebdb1bb0</CreditNoteID>
+      <CreditNoteNumber>CN-0023</CreditNoteNumber>
+    </CreditNote>
+  </CreditNotes>
+</Response>

@@ -1,0 +1,30 @@
+﻿<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>2ebd03aa-3533-443b-8003-280a22ac8082</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2010-09-02T10:37:47.00111Z</DateTimeUTC>
+  <Invoices>
+    <Invoice>
+      <Reference>RPT-DD</Reference>
+      <Type>ACCREC</Type>
+      <Contact>
+        <ContactID>06638157-fdfa-47f4-91d0-875b5f5c18c6</ContactID>
+        <Name>Marine Systems</Name>
+      </Contact>
+      <Date>2009-04-26T00:00:00</Date>
+      <DueDate>2009-04-26T00:00:00</DueDate>
+      <Status>SUBMITTED</Status>
+      <LineAmountTypes>NoTax</LineAmountTypes>
+      <SubTotal>28.50</SubTotal>
+      <TotalTax>3.56</TotalTax>
+      <Total>32.06</Total>
+      <UpdatedDateUTC>2009-08-14T21:04:58.09</UpdatedDateUTC>
+      <CurrencyCode>NZD</CurrencyCode>
+      <InvoiceID>03778e72-d541-404a-ab9b-2757aeda76a3</InvoiceID>
+      <InvoiceNumber>OIT00542</InvoiceNumber>
+      <AmountDue>32.06</AmountDue>
+      <AmountPaid>0.00</AmountPaid>
+      <AmountCredited>0.00</AmountCredited>
+    </Invoice>
+  </Invoices>
+</Response>

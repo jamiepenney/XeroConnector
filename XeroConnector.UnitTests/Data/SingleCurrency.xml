@@ -1,0 +1,12 @@
+﻿<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>69738410-1e39-48ae-91d5-c83999f155b7</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2010-09-02T11:05:46.1061247Z</DateTimeUTC>
+  <Currencies>
+    <Currency>
+      <Code>GBP</Code>
+      <Description>British Pound</Description>
+    </Currency>
+  </Currencies>
+</Response>

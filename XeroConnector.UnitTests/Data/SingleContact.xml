@@ -1,0 +1,52 @@
+﻿<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>2ebd03aa-3533-443b-8003-280a22ac8082</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2010-09-02T10:37:47.00111Z</DateTimeUTC>
+  <Contacts>
+    <Contact>
+      <ContactID>bd2270c3-8706-4c11-9cfb-000b551c3f51</ContactID>
+      <ContactStatus>ACTIVE</ContactStatus>
+      <Name>ABC Limited</Name>
+      <FirstName>Andrea</FirstName>
+      <LastName>Dutchess</LastName>
+      <EmailAddress>a.dutchess@abclimited.com</EmailAddress>
+      <SkypeUserName>24locks.demopurposesonly</SkypeUserName>
+      <BankAccountDetails>12346</BankAccountDetails>
+      <TaxNumber>1234567</TaxNumber>
+      <AccountsReceivableTaxType>SROUTPUT</AccountsReceivableTaxType>
+      <AccountsPayableTaxType>SRINPUT</AccountsPayableTaxType>
+      <UpdatedDateUTC>2009-05-14T01:44:26.747</UpdatedDateUTC>
+      <IsSupplier>false</IsSupplier>
+      <IsCustomer>true</IsCustomer>
+      <DefaultCurrency>GBP</DefaultCurrency>
+      <Addresses>
+        <Address>
+          <AddressType>POBOX</AddressType>
+          <AddressLine1>P O Box 123</AddressLine1>
+          <City>Wellington</City>
+          <PostalCode>6011</PostalCode>
+        </Address>
+        <Address>
+          <AddressType>STREET</AddressType>
+        </Address>
+      </Addresses>
+      <Phones>
+        <Phone>
+          <PhoneType>DEFAULT</PhoneType>
+          <PhoneNumber>085 3719</PhoneNumber>
+          <PhoneAreaCode>0800</PhoneAreaCode>
+        </Phone>
+        <Phone>
+          <PhoneType>FAX</PhoneType>
+        </Phone>
+        <Phone>
+          <PhoneType>MOBILE</PhoneType>
+        </Phone>
+        <Phone>
+          <PhoneType>DDI</PhoneType>
+        </Phone>
+      </Phones>
+    </Contact>
+  </Contacts>
+</Response>
