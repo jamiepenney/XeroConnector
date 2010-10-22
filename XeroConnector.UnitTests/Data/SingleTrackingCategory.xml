@@ -1,0 +1,23 @@
+﻿<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>6d666368-cc40-4a3c-bb9f-a036ba947f4c</Id>
+  <Status>OK</Status>
+  <ProviderName>Xero API Previewer</ProviderName>
+  <DateTimeUTC>2010-09-02T11:10:32.7228369Z</DateTimeUTC>
+  <TrackingCategories>
+    <TrackingCategory>
+      <TrackingCategoryID>a9cb5b5e-398c-4620-8fed-cec3965abba8</TrackingCategoryID>
+      <Name>Consultant</Name>
+      <Options>
+        <Option>
+          <Name>Odette Garrison</Name>
+        </Option>
+        <Option>
+          <Name>Oliver Gray</Name>
+        </Option>
+        <Option>
+          <Name>Tracy Green</Name>
+        </Option>
+      </Options>
+    </TrackingCategory>
+  </TrackingCategories>
+</Response>

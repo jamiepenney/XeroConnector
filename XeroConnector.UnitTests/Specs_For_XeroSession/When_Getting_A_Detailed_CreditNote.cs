@@ -47,7 +47,7 @@ namespace Specs_For_XeroSession
         public void It_Should_Get_The_LineItems_Correctly()
         {
             Assert.That(model.InvoiceLines, Is.Not.Null.And.Not.Empty);
-            Assert.That(model.InvoiceLines, Has.Count.EqualTo(1));
+            Assert.That(model.InvoiceLines, Has.Count.EqualTo(2));
         }
 
         [Test]

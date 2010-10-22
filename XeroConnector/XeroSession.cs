@@ -142,10 +142,10 @@ namespace XeroConnector
             return GetSingleModel<Organisation>(GetFirstChild(doc, "Organisations"));
         }
 
-        public TaxRate GetTaxRates(string taxType = null, string whereClause = null, string orderBy = null)
+        public IEnumerable<ITaxRate> GetTaxRates(string taxType = null, string whereClause = null, string orderBy = null)
         {
             var doc = _connection.MakeGetTaxRatesRequest(taxType, whereClause, orderBy);
-            return GetSingleModel<TaxRate>(GetFirstChild(doc, "TaxRates"));
+            return GetMultipleModels<TaxRate>(doc, "TaxRates");
         }
 
         public TrackingCategory GetTrackingCategory(Guid categoryID)

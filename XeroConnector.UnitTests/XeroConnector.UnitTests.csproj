@@ -80,6 +80,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specs_For_XeroSession\When_Getting_A_Detailed_TrackingCategory.cs" />
+    <Compile Include="Specs_For_XeroSession\When_Getting_A_Compact_TaxRate.cs" />
     <Compile Include="Specs_For_XeroSession\When_Getting_A_Detailed_CreditNote.cs" />
     <Compile Include="Specs_For_XeroSession\When_Getting_A_Compact_CreditNote.cs" />
     <Compile Include="Specs_For_XeroSession\When_Getting_A_Detailed_Contact.cs" />
@@ -126,7 +128,7 @@
     <None Include="Data\CompactTaxRate.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Data\CompactTrackingCategory.xml">
+    <None Include="Data\SingleTrackingCategory.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Data\SingleOrganisation.xml">

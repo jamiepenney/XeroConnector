@@ -19,7 +19,7 @@ namespace XeroConnector.Model
         [XmlElement]
         public string Name { get; set; }
 
-        [XmlElement]
+        [XmlArray]
         public Collection<Option> Options { get; set; }
     }
 

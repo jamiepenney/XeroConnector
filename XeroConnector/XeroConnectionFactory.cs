@@ -2,6 +2,7 @@
 using System.Security.Cryptography.X509Certificates;
 using DevDefined.OAuth.Consumer;
 using DevDefined.OAuth.Framework;
+using XeroConnector.Interfaces;
 
 namespace XeroConnector
 {
@@ -67,5 +68,9 @@ namespace XeroConnector
             };
         }
 
+        public IXeroConnection CreateXeroConnection()
+        {
+            return new XeroConnection(CreatePrivateConsumerSession(), CreatePrivateAccessToken());
+        }
     }
 }

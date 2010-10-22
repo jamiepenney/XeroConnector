@@ -106,8 +106,7 @@ namespace Specs_For_XeroSession
         [Test]
         public void It_Should_Get_Both_Addresses()
         {
-            // Don't test the addresses themselves - that will be covered
-            // in another test.
+            Assert.That(contact.Addresses, Is.Not.Null.And.Not.Empty);
             Assert.That(contact.Addresses.Count, Is.EqualTo(2));
         }
 

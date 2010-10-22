@@ -28,7 +28,7 @@ namespace XeroConnector.Model.Interfaces
         [XmlElement]
         LineAmountTypes LineAmountTypes { get; set; }
 
-        [XmlElement("LineItems")]
+        [XmlArray("LineItems")]
         [LazyLoad]
         Collection<LineItem> InvoiceLines { get; set; }
 

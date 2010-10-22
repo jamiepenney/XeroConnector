@@ -167,7 +167,7 @@ namespace Specs_For_XeroSession
 
             // Act
             payments = invoice.Payments;
-            lineItems = invoice.LineItems;
+            lineItems = invoice.InvoiceLines;
         }
 
         private IInvoice invoice;

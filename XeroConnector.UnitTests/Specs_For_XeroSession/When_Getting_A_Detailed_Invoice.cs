@@ -118,7 +118,7 @@ namespace Specs_For_XeroSession
         [Test]
         public void It_Should_Fill_The_InvoiceLines_Collection()
         {
-            Assert.That(invoice.LineItems.Count, Is.EqualTo(2));
+            Assert.That(invoice.InvoiceLines.Count, Is.EqualTo(2));
         }
 
         [Test]

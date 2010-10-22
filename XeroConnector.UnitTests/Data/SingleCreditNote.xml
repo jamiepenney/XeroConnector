@@ -63,6 +63,22 @@
             </TrackingCategory>
           </Tracking>
         </LineItem>
+        <LineItem>
+          <Description>Item2</Description>
+          <Quantity>1.0000</Quantity>
+          <UnitAmount>270.63</UnitAmount>
+          <TaxType>SRINPUT</TaxType>
+          <TaxAmount>35.30</TaxAmount>
+          <LineAmount>270.63</LineAmount>
+          <AccountCode>720</AccountCode>
+          <Tracking>
+            <TrackingCategory>
+              <TrackingCategoryID>a9cb5b5e-398c-4620-8fed-cec3965abba8</TrackingCategoryID>
+              <Name>Consultant</Name>
+              <Option>Oliver Gray</Option>
+            </TrackingCategory>
+          </Tracking>
+        </LineItem>
       </LineItems>
       <SubTotal>235.33</SubTotal>
       <TotalTax>35.30</TotalTax>

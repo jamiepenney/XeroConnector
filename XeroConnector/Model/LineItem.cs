@@ -34,7 +34,6 @@ namespace XeroConnector.Model
         public string AccountCode { get; set; }
 
         [XmlArray("Tracking")]
-        [XmlArrayItem("TrackingCategory", typeof(TrackingCategory))]
         public Collection<TrackingCategory> TrackingCategories { get; set; }
     }
 }

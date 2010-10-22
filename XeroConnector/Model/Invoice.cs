@@ -17,7 +17,7 @@ namespace XeroConnector.Model
             : base(xeroSession)
         {
             Payments = new Collection<Payment>();
-            LineItems = new Collection<LineItem>();
+            InvoiceLines = new Collection<LineItem>();
         }
 
         [XmlElement]
@@ -73,11 +73,10 @@ namespace XeroConnector.Model
 
         [LazyLoad]
         [XmlArray("LineItems")]
-        [XmlArrayItem("LineItem", typeof(LineItem))]
-        public Collection<LineItem> LineItems { get; set; }
+        public Collection<LineItem> InvoiceLines { get; set; }
 
         [LazyLoad]
-        [XmlArray]
+        [XmlArray("Payments")]
         public Collection<Payment> Payments { get; set; }
 
         public override void LoadDetailedInformation()

@@ -25,7 +25,7 @@ namespace XeroConnector.Interfaces
 
         Organisation GetOrganisation();
 
-        TaxRate GetTaxRates(string taxType = null, string whereClause = null, string orderBy = null);
+        IEnumerable<ITaxRate> GetTaxRates(string taxType = null, string whereClause = null, string orderBy = null);
 
         TrackingCategory GetTrackingCategory(Guid categoryID);
         IEnumerable<TrackingCategory> GetTrackingCategories(string whereClause = null, string orderBy = null);

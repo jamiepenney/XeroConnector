@@ -60,8 +60,7 @@ namespace XeroConnector.Model.Interfaces
 
         [LazyLoad]
         [XmlArray("LineItems")]
-        [XmlArrayItem("LineItem", typeof(LineItem))]
-        Collection<LineItem> LineItems { get; set; }
+        Collection<LineItem> InvoiceLines { get; set; }
 
         [LazyLoad]
         [XmlArray]

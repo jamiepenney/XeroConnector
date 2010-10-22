@@ -125,7 +125,7 @@ namespace Specs_For_XeroSession
         public void It_Should_Fill_The_InvoiceLines_Collection()
         {
             Assert.That(invoiceLines, Is.Not.Null.And.Not.Empty);
-            Assert.That(invoiceLines.Count, Is.EqualTo(1));
+            Assert.That(invoiceLines.Count, Is.EqualTo(2));
         }
 
         [TestFixtureSetUp]

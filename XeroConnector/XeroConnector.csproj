@@ -96,6 +96,7 @@
     <Compile Include="Model\Interfaces\IContact.cs" />
     <Compile Include="Model\Interfaces\IInvoice.cs" />
     <Compile Include="Model\Invoice.cs" />
+    <Compile Include="Model\Interfaces\ITaxRate.cs" />
     <Compile Include="Model\LineItem.cs" />
     <Compile Include="Model\ModelBase.cs" />
     <Compile Include="Model\Organisation.cs" />

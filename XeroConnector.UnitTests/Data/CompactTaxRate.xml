@@ -8,10 +8,10 @@
       <Name>15% (VAT on Capital Purchases)</Name>
       <TaxType>CAPEXSRINPUT</TaxType>
       <CanApplyToAssets>true</CanApplyToAssets>
-      <CanApplyToEquity>false</CanApplyToEquity>
-      <CanApplyToExpenses>false</CanApplyToExpenses>
-      <CanApplyToLiabilities>false</CanApplyToLiabilities>
-      <CanApplyToRevenue>false</CanApplyToRevenue>
+      <CanApplyToEquity>true</CanApplyToEquity>
+      <CanApplyToExpenses>true</CanApplyToExpenses>
+      <CanApplyToLiabilities>true</CanApplyToLiabilities>
+      <CanApplyToRevenue>true</CanApplyToRevenue>
       <DisplayTaxRate>15.0000</DisplayTaxRate>
       <EffectiveRate>15.0000</EffectiveRate>
     </TaxRate>
