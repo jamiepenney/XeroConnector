@@ -20,62 +20,62 @@ namespace XeroConnector
 
         public XDocument MakeGetAccountRequest(Guid accountID)
         {
-            return GetRequest("Accounts/" + accountID).ToDocument();
+            return ParseResponse(GetRequest("Accounts/" + accountID));
         }
 
         public XDocument MakeGetAccountsRequest(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
         {
-            return GetRequest("Accounts/", whereClause, orderBy, modifiedAfter).ToDocument();
+            return ParseResponse(GetRequest("Accounts/", whereClause, orderBy, modifiedAfter));
         }
 
         public XDocument MakeGetContactRequest(string contactIdentifier)
         {
-            return GetRequest("Contacts/" + contactIdentifier).ToDocument();
+            return ParseResponse(GetRequest("Contacts/" + contactIdentifier));
         }
 
         public XDocument MakeGetContactRequest(Guid contactID)
         {
-            return GetRequest("Contacts/" + contactID).ToDocument();
+            return ParseResponse(GetRequest("Contacts/" + contactID));
         }
 
         public XDocument MakeGetContactsRequest(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
         {
-            return GetRequest("Contacts/", whereClause, orderBy, modifiedAfter).ToDocument();
+            return ParseResponse(GetRequest("Contacts/", whereClause, orderBy, modifiedAfter));
         }
 
         public XDocument MakeGetCreditNoteRequest(string noteIdentifier)
         {
-            return GetRequest("CreditNotes/" + noteIdentifier).ToDocument();
+            return ParseResponse(GetRequest("CreditNotes/" + noteIdentifier));
         }
 
         public XDocument MakeGetCreditNoteRequest(Guid creditNoteID)
         {
-            return GetRequest("CreditNotes/" + creditNoteID).ToDocument();
+            return ParseResponse(GetRequest("CreditNotes/" + creditNoteID));
         }
 
         public XDocument MakeGetCreditNotesRequest(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
         {
-            return GetRequest("CreditNotes/", whereClause, orderBy, modifiedAfter).ToDocument();
+            return ParseResponse(GetRequest("CreditNotes/", whereClause, orderBy, modifiedAfter));
         }
 
         public XDocument MakeGetCurrenciesRequest(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
         {
-            return GetRequest("Currencies/", whereClause, orderBy, modifiedAfter).ToDocument();
+            return ParseResponse(GetRequest("Currencies/", whereClause, orderBy, modifiedAfter));
         }
 
         public XDocument MakeGetInvoicesRequest(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
         {
-            return GetRequest("Invoices/", whereClause, orderBy, modifiedAfter).ToDocument();
+            return ParseResponse(GetRequest("Invoices/", whereClause, orderBy, modifiedAfter));
         }
 
         public XDocument MakeGetInvoiceRequest(Guid invoiceID)
         {
-            return GetRequest("Invoices/" + invoiceID).ToDocument();
+            return ParseResponse(GetRequest("Invoices/" + invoiceID));
         }
 
         public XDocument MakeGetOrganisationRequest()
         {
-            return GetRequest("Organisation/").ToDocument();
+            return ParseResponse(GetRequest("Organisation/"));
         }
 
         public XDocument MakeGetTaxRatesRequest(string taxType = null, string whereClause = null, string orderBy = null)
@@ -88,12 +88,19 @@ namespace XeroConnector
 
         public XDocument MakeGetTrackingCategoriesRequest(string whereClause = null, string orderBy = null)
         {
-            return GetRequest("TrackingCategories/", whereClause, orderBy).ToDocument();
+            return ParseResponse(GetRequest("TrackingCategories/", whereClause, orderBy));
         }
 
         public XDocument MakeGetTrackingCategoryRequest(Guid categoryID)
         {
-            return GetRequest("TrackingCategories/" + categoryID).ToDocument();
+            return ParseResponse(GetRequest("TrackingCategories/" + categoryID));
+        }
+
+        private XDocument ParseResponse(IConsumerRequest request)
+        {
+            XDocument document = request.ToDocument();
+            // This is where I should be checking for error codes - but I don't have any test data yet.
+            return document;
         }
 
         private IConsumerRequest GetRequest(string endpointName, string whereClause = null, string orderBy = null, DateTime? modifiedAfter = null)

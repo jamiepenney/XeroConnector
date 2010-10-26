@@ -27,18 +27,21 @@ namespace XeroConnector
         {
             using(var fileReader = new StreamReader(configFile))
             {
-                _privateUserAgentString = fileReader.ReadLine().Trim();
-                _privateConsumerKey = fileReader.ReadLine().Trim();
-                _privateConsumerSecret = fileReader.ReadLine().Trim();
-                _privateKeyFile = fileReader.ReadLine().Trim();
-                _privateKeyPassword = fileReader.ReadLine().Trim();
+                _privateConsumerKey = fileReader.ReadLine() ?? "".Trim();
+                _privateConsumerSecret = fileReader.ReadLine() ?? "".Trim();
+                _privateUserAgentString = fileReader.ReadLine() ?? "".Trim();
+                _privateKeyFile = fileReader.ReadLine() ?? "".Trim();
+                _privateKeyPassword = fileReader.ReadLine() ?? "".Trim();
             }
         }
 
         public IOAuthSession CreatePrivateConsumerSession()
         {
             // Load the private certificate from disk using the password used to create it
-            var privateCertificate = new X509Certificate2(_privateKeyFile, _privateKeyPassword);
+
+            var privateCertificate = string.IsNullOrEmpty(_privateKeyPassword) ? 
+                new X509Certificate2(_privateKeyFile) : 
+                new X509Certificate2(_privateKeyFile, _privateKeyPassword);
 
             // Create the consumer session
             var consumerContext = new OAuthConsumerContext
@@ -48,7 +51,7 @@ namespace XeroConnector
                 SignatureMethod = SignatureMethod.RsaSha1,
                 UseHeaderForOAuthParameters = true,
                 Key = privateCertificate.PrivateKey,
-                UserAgent = string.Format(_privateUserAgentString)
+                UserAgent = _privateUserAgentString
             };
 
             return new OAuthSession(

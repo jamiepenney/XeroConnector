@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeroConnector", "XeroConnec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeroConnector.UnitTests", "XeroConnector.UnitTests\XeroConnector.UnitTests.csproj", "{3A6F487D-7B95-4647-870A-47EF5B5E7FAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeroConnector.Sample", "XeroConnector.Sample\XeroConnector.Sample.csproj", "{6B336278-059E-4AE9-AC4B-E6045527958A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,13 @@ Global
 		{3A6F487D-7B95-4647-870A-47EF5B5E7FAF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3A6F487D-7B95-4647-870A-47EF5B5E7FAF}.Release|x86.ActiveCfg = Release|x86
 		{3A6F487D-7B95-4647-870A-47EF5B5E7FAF}.Release|x86.Build.0 = Release|x86
+		{6B336278-059E-4AE9-AC4B-E6045527958A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{6B336278-059E-4AE9-AC4B-E6045527958A}.Debug|Any CPU.Build.0 = Debug|x86
+		{6B336278-059E-4AE9-AC4B-E6045527958A}.Debug|x86.ActiveCfg = Debug|x86
+		{6B336278-059E-4AE9-AC4B-E6045527958A}.Debug|x86.Build.0 = Debug|x86
+		{6B336278-059E-4AE9-AC4B-E6045527958A}.Release|Any CPU.ActiveCfg = Release|x86
+		{6B336278-059E-4AE9-AC4B-E6045527958A}.Release|x86.ActiveCfg = Release|x86
+		{6B336278-059E-4AE9-AC4B-E6045527958A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

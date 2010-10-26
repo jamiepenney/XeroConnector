@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("XeroConnector.UnitTests")]
+[assembly: AssemblyTitle("XeroConnector.Sample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2bb2d7d6-ba34-4c58-adf3-e0bf30b0bd46")]
+[assembly: Guid("b535f2c6-a5e3-4b73-b53a-625f4cdac8e0")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -4,4 +4,10 @@ XeroConnector/bin
 XeroConnector/obj
 XeroConnector.UnitTests/bin
 XeroConnector.UnitTests/obj
+XeroConnector.Sample/bin
+XeroConnector.Sample/obj
+XeroConnector.Sample/privatekey.pem
+XeroConnector.Sample/public+privatekey.pfx
+XeroConnector.Sample/publickey.cer
+XeroConnector.Sample/config.cfg
 *.ReSharper.user
