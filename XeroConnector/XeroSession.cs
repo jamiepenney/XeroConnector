@@ -69,95 +69,119 @@ namespace XeroConnector
             PropertyCopier<TIModel, TIModel>.Copy(model, existingModel);
         }
 
-        public IAccount GetAccount(Guid accountID)
+        public Response<IAccount> GetAccount(Guid accountID)
         {
             var doc = _connection.MakeGetAccountRequest(accountID);
-            return GetSingleModel<Account>(GetFirstChild(doc, "Accounts"));
+            IAccount model = GetSingleModel<Account>(GetFirstChild(doc, "Accounts"));
+            return GetResponse(model, doc);
         }
 
-        public IEnumerable<IAccount> GetAccounts(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
+        public Response<IEnumerable<IAccount>> GetAccounts(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
         {
             var doc = _connection.MakeGetAccountsRequest(modifiedAfter, whereClause, orderBy);
-            return GetMultipleModels<Account>(doc, "Accounts");
+            IEnumerable<IAccount> models = GetMultipleModels<Account>(doc, "Accounts");
+            return GetResponse(models, doc);
         }
 
-        public IContact GetContact(string contactIdentifier)
+        public Response<IContact> GetContact(string contactIdentifier)
         {
             var doc = _connection.MakeGetContactRequest(contactIdentifier);
-            return GetSingleModel<Contact>(GetFirstChild(doc, "Contacts"));
+            IContact model = GetSingleModel<Contact>(GetFirstChild(doc, "Contacts"));
+            return GetResponse(model, doc);
         }
 
-        public IContact GetContact(Guid contactID)
+        public Response<IContact> GetContact(Guid contactID)
         {
             var doc = _connection.MakeGetContactRequest(contactID);
-            return GetSingleModel<Contact>(GetFirstChild(doc, "Contacts"));
+            IContact model = GetSingleModel<Contact>(GetFirstChild(doc, "Contacts"));
+            return GetResponse(model, doc);
         }
 
-        public IEnumerable<IContact> GetContacts(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
+        public Response<IEnumerable<IContact>> GetContacts(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
         {
             var doc = _connection.MakeGetContactsRequest(modifiedAfter, whereClause, orderBy);
-            return GetMultipleModels<Contact>(doc, "Contacts");
+            IEnumerable<IContact> models = GetMultipleModels<Contact>(doc, "Contacts");
+            return GetResponse(models, doc);
         }
 
-        public ICreditNote GetCreditNote(string creditNoteIdentifier)
+        public Response<ICreditNote> GetCreditNote(string creditNoteIdentifier)
         {
             var doc = _connection.MakeGetCreditNoteRequest(creditNoteIdentifier);
-            return GetSingleModel<CreditNote>(GetFirstChild(doc, "CreditNotes"));
+            ICreditNote model = GetSingleModel<CreditNote>(GetFirstChild(doc, "CreditNotes"));
+            return GetResponse(model, doc);
         }
 
-        public ICreditNote GetCreditNote(Guid creditNoteID)
+        public Response<ICreditNote> GetCreditNote(Guid creditNoteID)
         {
             var doc = _connection.MakeGetCreditNoteRequest(creditNoteID);
-            return GetSingleModel<CreditNote>(GetFirstChild(doc, "CreditNotes"));
+            ICreditNote model = GetSingleModel<CreditNote>(GetFirstChild(doc, "CreditNotes"));
+            return GetResponse(model, doc);
         }
 
-        public IEnumerable<ICreditNote> GetCreditNotes(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
+        public Response<IEnumerable<ICreditNote>> GetCreditNotes(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
         {
             var doc = _connection.MakeGetCreditNotesRequest(modifiedAfter, whereClause, orderBy);
-            return GetMultipleWrappedModels<CreditNote, ICreditNote>(doc, "CreditNotes");
+            var models = GetMultipleWrappedModels<CreditNote, ICreditNote>(doc, "CreditNotes");
+            return GetResponse(models, doc);
         }
 
-        public IEnumerable<Currency> GetCurrencies(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
+        public Response<IEnumerable<Currency>> GetCurrencies(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
         {
             var doc = _connection.MakeGetCurrenciesRequest(modifiedAfter, whereClause, orderBy);
-            return GetMultipleModels<Currency>(doc, "Currencies");
+            var models = GetMultipleModels<Currency>(doc, "Currencies");
+            return GetResponse(models, doc);
         }
 
-        public IInvoice GetInvoice(Guid invoiceID)
+        public Response<IInvoice> GetInvoice(Guid invoiceID)
         {
             var doc = _connection.MakeGetInvoiceRequest(invoiceID);
             IInvoice invoice = GetSingleWrappedModel<Invoice, IInvoice>(doc, "Invoices", true);
-            return invoice;
+            return GetResponse(invoice, doc);
         }
 
-        public IEnumerable<IInvoice> GetInvoices(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
+        public Response<IEnumerable<IInvoice>> GetInvoices(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null)
         {
             var doc = _connection.MakeGetInvoicesRequest(modifiedAfter, whereClause, orderBy);
-            return GetMultipleWrappedModels<Invoice, IInvoice>(doc, "Invoices");
+            var models = GetMultipleWrappedModels<Invoice, IInvoice>(doc, "Invoices");
+            return GetResponse(models, doc);
         }
 
-        public Organisation GetOrganisation()
+        public Response<Organisation> GetOrganisation()
         {
             var doc = _connection.MakeGetOrganisationRequest();
-            return GetSingleModel<Organisation>(GetFirstChild(doc, "Organisations"));
+            var model = GetSingleModel<Organisation>(GetFirstChild(doc, "Organisations"));
+            return GetResponse(model, doc);
         }
 
-        public IEnumerable<ITaxRate> GetTaxRates(string taxType = null, string whereClause = null, string orderBy = null)
+        public Response<IEnumerable<ITaxRate>> GetTaxRates(string taxType = null, string whereClause = null, string orderBy = null)
         {
             var doc = _connection.MakeGetTaxRatesRequest(taxType, whereClause, orderBy);
-            return GetMultipleModels<TaxRate>(doc, "TaxRates");
+            IEnumerable<ITaxRate> models = GetMultipleModels<TaxRate>(doc, "TaxRates");
+            return GetResponse(models, doc);
         }
 
-        public TrackingCategory GetTrackingCategory(Guid categoryID)
+        public Response<TrackingCategory> GetTrackingCategory(Guid categoryID)
         {
             var doc = _connection.MakeGetTrackingCategoryRequest(categoryID);
-            return GetSingleModel<TrackingCategory>(GetFirstChild(doc, "TrackingCategories"));
+            var model = GetSingleModel<TrackingCategory>(GetFirstChild(doc, "TrackingCategories"));
+            return GetResponse(model, doc);
+
         }
 
-        public IEnumerable<TrackingCategory> GetTrackingCategories(string whereClause = null, string orderBy = null)
+        public Response<IEnumerable<TrackingCategory>> GetTrackingCategories(string whereClause = null, string orderBy = null)
         {
             var doc = _connection.MakeGetTrackingCategoriesRequest(whereClause, orderBy);
-            return GetMultipleModels<TrackingCategory>(doc, "TrackingCategories");
+            var models = GetMultipleModels<TrackingCategory>(doc, "TrackingCategories");
+            return GetResponse(models, doc);
+        }
+
+        private Response<T> GetResponse<T>(T model, XDocument doc)
+        {
+            var response = new Response<T> {Result = model};
+
+            FillResponse(response, doc);
+
+            return response;
         }
 
         private static T GetWrappedModel<T>(T model)
@@ -171,30 +195,42 @@ namespace XeroConnector
         {
             var root = doc.Elements().First();
             if (root == null)
+            {
                 return new U[0];
+            }
 
             var element = root.Element(elementToFind);
-            if (element == null) return new U[0];
+            if (element == null)
+            {
+                return new U[0];
+            }
 
             var elements = element.Elements();
 
             IEnumerable<T> models = elements.Select(elm => (GetSingleModel<T>(elm)));
 
-            return models.Select(model =>
-            {
-                model.XeroSession = this;
-                return GetWrappedModel<U>(model);
-            }).ToList();
+            List<U> list = models.Select(model =>
+                                    {
+                                        model.XeroSession = this;
+                                        return GetWrappedModel<U>(model);
+                                    }).ToList();
+
+            return list;
         }
 
         private IEnumerable<T> GetMultipleModels<T>(XDocument doc, string elementToFind) where T : IModel
         {
             var root = doc.Elements().First();
             if (root == null)
+            {
                 return new T[0];
+            }
 
             var element = root.Element(elementToFind);
-            if (element == null) return new T[0];
+            if (element == null)
+            {
+                return new T[0];
+            }
 
             var elements = element.Elements();
 
@@ -225,6 +261,29 @@ namespace XeroConnector
             if (element == null) return null;
 
             return element.Elements().FirstOrDefault();
+        }
+
+        private void FillResponse<T>(Response<T> response, XDocument doc)
+        {
+            var root = doc.Elements().FirstOrDefault();
+            if (root == null)
+            {
+                response.Id = Guid.NewGuid();
+                response.ProviderName = _connection.UserAgent;
+                response.Status = "InvalidResponse";
+                return;
+            }
+            
+            response.Id = GetValue(root.Element("Id")).ToGuid();
+            response.Status = GetValue(root.Element("Status"));
+            response.ProviderName = GetValue(root.Element("ProviderName"));
+            response.DateTimeUTC = GetValue(root.Element("DateTimeUTC")).As<DateTime>();
+        }
+
+        private static string GetValue(XElement element)
+        {
+            if (element != null) return element.Value;
+            return "";
         }
     }
 }

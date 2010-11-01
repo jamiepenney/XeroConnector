@@ -134,10 +134,12 @@ namespace Specs_For_XeroSession
 
             // Act
             session = new XeroSession(connection);
-            contact = session.GetContact(Guid.Empty);
+            response = session.GetContact(Guid.Empty);
+            contact = response.Result;
         }
 
         private IContact contact;
         private XeroSession session;
+        private Response<IContact> response;
     }
 }

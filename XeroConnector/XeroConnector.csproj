@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="Interfaces\IXeroSession.cs" />
     <Compile Include="Interfaces\IXeroConnection.cs" />
+    <Compile Include="Response.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Contact.cs" />

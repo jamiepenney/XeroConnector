@@ -27,5 +27,7 @@ namespace XeroConnector.Interfaces
 
         XDocument MakeGetTrackingCategoryRequest(Guid categoryID);
         XDocument MakeGetTrackingCategoriesRequest(string whereClause = null, string orderBy = null);
+        
+        string UserAgent { get; }
     }
 }

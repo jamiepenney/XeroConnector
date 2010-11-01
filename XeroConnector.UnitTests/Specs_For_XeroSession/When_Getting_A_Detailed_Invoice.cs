@@ -140,10 +140,12 @@ namespace Specs_For_XeroSession
             // Act
             session = new XeroSession(connection);
 
-            invoice = session.GetInvoice(Guid.Empty);
+            response = session.GetInvoice(Guid.Empty);
+            invoice = response.Result;
         }
 
         private IInvoice invoice;
         private XeroSession session;
+        private Response<IInvoice> response;
     }
 }

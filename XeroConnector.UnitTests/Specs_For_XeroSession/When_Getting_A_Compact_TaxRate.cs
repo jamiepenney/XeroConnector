@@ -82,9 +82,11 @@ namespace Specs_For_XeroSession
             // Act
             var session = new XeroSession(connection);
 
-            model = session.GetTaxRates().First();
+            response = session.GetTaxRates();
+            model = response.Result.First();
         }
 
+        private Response<IEnumerable<ITaxRate>> response;
         private ITaxRate model;
     }
 }

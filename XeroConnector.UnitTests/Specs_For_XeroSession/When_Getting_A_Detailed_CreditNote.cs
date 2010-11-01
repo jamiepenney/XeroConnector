@@ -117,10 +117,12 @@ namespace Specs_For_XeroSession
             // Act
             session = new XeroSession(connection);
 
-            model = session.GetCreditNote(Guid.Empty);
+            response = session.GetCreditNote(Guid.Empty);
+            model = response.Result;
         }
 
         private ICreditNote model;
         private XeroSession session;
+        private Response<ICreditNote> response;
     }
 }

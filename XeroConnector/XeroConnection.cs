@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using DevDefined.OAuth.Consumer;
 using DevDefined.OAuth.Framework;
+using DevDefined.OAuth.Utility;
 using XeroConnector.Interfaces;
 
 namespace XeroConnector
@@ -16,6 +17,11 @@ namespace XeroConnector
         {
             _session = session;
             _token = token;
+        }
+
+        public string UserAgent
+        {
+            get { return _session.ConsumerContext.UserAgent; }
         }
 
         public XDocument MakeGetAccountRequest(Guid accountID)
@@ -83,7 +89,7 @@ namespace XeroConnector
             var request = GetRequest("TaxRates/", whereClause, orderBy)
                 .AddFormParameter("TaxType", taxType);
             
-            return request.ToDocument();
+            return ParseResponse(request);
         }
 
         public XDocument MakeGetTrackingCategoriesRequest(string whereClause = null, string orderBy = null)
@@ -98,9 +104,22 @@ namespace XeroConnector
 
         private XDocument ParseResponse(IConsumerRequest request)
         {
-            XDocument document = request.ToDocument();
-            // This is where I should be checking for error codes - but I don't have any test data yet.
-            return document;
+            var response = request.ToWebResponse();
+            if(response.StatusCode == System.Net.HttpStatusCode.OK
+                || response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            {
+                return XDocument.Parse(response.ReadToEnd());
+            }
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                string responseXml = string.Format(NotFoundResponseTemplate,
+                                                   Guid.NewGuid(), _session.ConsumerContext.UserAgent, DateTime.UtcNow);
+
+                return XDocument.Parse(responseXml);
+            }
+
+            throw new Exception("Unknown response status code: " + response.StatusCode);
         }
 
         private IConsumerRequest GetRequest(string endpointName, string whereClause = null, string orderBy = null, DateTime? modifiedAfter = null)
@@ -114,6 +133,14 @@ namespace XeroConnector
                 .AddFormParameter("Order", orderBy)
                 .AddModifierAfterHeader(modifiedAfter);
         }
+
+        private const string NotFoundResponseTemplate =
+@"<Response xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+    <Id>{0}</Id>
+    <Status>NotFound</Status>
+    <ProviderName>{1}</ProviderName>
+    <DateTimeUTC>{2}</DateTimeUTC>
+</Response>";
     }
 
     public static class CustomerRequestExtension

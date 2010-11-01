@@ -118,10 +118,12 @@ namespace Specs_For_XeroSession
             // Act
             var session = new XeroSession(connection);
 
-            invoice = session.GetInvoice(Guid.Empty);
+            response = session.GetInvoice(Guid.Empty);
+            invoice = response.Result;
         }
 
         private IInvoice invoice;
+        private Response<IInvoice> response;
     }
 
     [TestFixture]
@@ -163,7 +165,8 @@ namespace Specs_For_XeroSession
                 .Return(fullInvoiceDoc);
 
             var session = new XeroSession(connection);
-            invoice = session.GetInvoices().First();
+            response = session.GetInvoices();
+            invoice = response.Result.First();
 
             // Act
             payments = invoice.Payments;
@@ -174,5 +177,6 @@ namespace Specs_For_XeroSession
         private IXeroConnection connection;
         private ICollection<Payment> payments;
         private Collection<LineItem> lineItems;
+        private Response<IEnumerable<IInvoice>> response;
     }
 }

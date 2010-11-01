@@ -106,9 +106,11 @@ namespace Specs_For_XeroSession
             // Act
             var session = new XeroSession(connection);
 
-            model = session.GetCreditNotes().First();
+            response = session.GetCreditNotes();
+            model = response.Result.First();
         }
 
+        private Response<IEnumerable<ICreditNote>> response;
         private ICreditNote model;
     }
 
@@ -144,12 +146,14 @@ namespace Specs_For_XeroSession
                 .Return(fullCreditNoteDoc);
 
             var session = new XeroSession(connection);
-            model = session.GetCreditNotes().First();
+            response = session.GetCreditNotes();
+            model = response.Result.First();
 
             // Act
             invoiceLines = model.InvoiceLines;
         }
 
+        private Response<IEnumerable<ICreditNote>> response;
         private ICreditNote model;
         private IXeroConnection connection;
         private Collection<LineItem> invoiceLines;

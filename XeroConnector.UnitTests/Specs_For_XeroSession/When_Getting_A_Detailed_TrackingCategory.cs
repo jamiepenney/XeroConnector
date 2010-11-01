@@ -53,9 +53,11 @@ namespace Specs_For_XeroSession
             // Act
             session = new XeroSession(connection);
 
-            model = session.GetTrackingCategory(new Guid("a9cb5b5e-398c-4620-8fed-cec3965abba8"));
+            result = session.GetTrackingCategory(new Guid("a9cb5b5e-398c-4620-8fed-cec3965abba8"));
+            model = result.Result;
         }
 
+        private Response<TrackingCategory> result;
         private TrackingCategory model;
         private XeroSession session;
     }

@@ -7,28 +7,28 @@ namespace XeroConnector.Interfaces
 {
     public interface IXeroSession
     {
-        IAccount GetAccount(Guid accountID);
-        IEnumerable<IAccount> GetAccounts(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null);
+        Response<IAccount> GetAccount(Guid accountID);
+        Response<IEnumerable<IAccount>> GetAccounts(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null);
 
-        IContact GetContact(string contactIdentifier);
-        IContact GetContact(Guid contactID);
-        IEnumerable<IContact> GetContacts(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null);
+        Response<IContact> GetContact(string contactIdentifier);
+        Response<IContact> GetContact(Guid contactID);
+        Response<IEnumerable<IContact>> GetContacts(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null);
 
-        ICreditNote GetCreditNote(string noteIdentifier);
-        ICreditNote GetCreditNote(Guid creditNoteID);
-        IEnumerable<ICreditNote> GetCreditNotes(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null);
+        Response<ICreditNote> GetCreditNote(string noteIdentifier);
+        Response<ICreditNote> GetCreditNote(Guid creditNoteID);
+        Response<IEnumerable<ICreditNote>> GetCreditNotes(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null);
 
-        IEnumerable<Currency> GetCurrencies(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null);
+        Response<IEnumerable<Currency>> GetCurrencies(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null);
 
-        IInvoice GetInvoice(Guid invoiceID);
-        IEnumerable<IInvoice> GetInvoices(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null);
+        Response<IInvoice> GetInvoice(Guid invoiceID);
+        Response<IEnumerable<IInvoice>> GetInvoices(DateTime? modifiedAfter = null, string whereClause = null, string orderBy = null);
 
-        Organisation GetOrganisation();
+        Response<Organisation> GetOrganisation();
 
-        IEnumerable<ITaxRate> GetTaxRates(string taxType = null, string whereClause = null, string orderBy = null);
+        Response<IEnumerable<ITaxRate>> GetTaxRates(string taxType = null, string whereClause = null, string orderBy = null);
 
-        TrackingCategory GetTrackingCategory(Guid categoryID);
-        IEnumerable<TrackingCategory> GetTrackingCategories(string whereClause = null, string orderBy = null);
+        Response<TrackingCategory> GetTrackingCategory(Guid categoryID);
+        Response<IEnumerable<TrackingCategory>> GetTrackingCategories(string whereClause = null, string orderBy = null);
 
         void LoadContactDetails(IContact contact);
         void GetInvoiceDetails(IInvoice invoice);

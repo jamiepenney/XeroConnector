@@ -73,9 +73,11 @@ namespace Specs_For_XeroSession
 
             // Act
             session = new XeroSession(connection);
-            account = session.GetAccount(Guid.Empty);
+            response = session.GetAccount(Guid.Empty);
+            account = response.Result;
         }
 
+        private Response<IAccount> response;
         private IAccount account;
         private XeroSession session;
     }
